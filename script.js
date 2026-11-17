@@ -37,6 +37,9 @@
 
   openButtons.forEach((button) => {
     button.addEventListener("click", () => {
+      menuButton?.setAttribute("aria-expanded", "false");
+      menuButton?.setAttribute("aria-label", "Open navigation");
+      navigation?.classList.remove("is-open");
       if (!dialog) return;
       const selectedCourse = button.getAttribute("data-course");
       if (selectedCourse && courseSelect) courseSelect.value = selectedCourse;
