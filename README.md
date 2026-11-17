@@ -1,19 +1,25 @@
-# FYND Academy website
+# FYND Academy Website
 
-Responsive static website with five main pages and an Enroll Now CTA.
+A responsive, lightweight five-page static website for FYND Academy.
 
 ## Pages
-- index.html — Home, with demo enrollment enquiry section
-- about.html — About
-- courses.html — Courses
-- blogs.html — Blogs with search
-- contact.html — Contact
+- `index.html` — Home and Enroll Now dialog
+- `about.html` — About the academy and its learning philosophy
+- `courses.html` — Learning paths with category filters
+- `blogs.html` — Journal cards with live search
+- `contact.html` — Enquiry form
+
+## Tech
+- Semantic HTML, CSS and vanilla JavaScript
+- No framework, build step or runtime dependencies
+- Responsive navigation, keyboard support and reduced-motion handling
+- SEO descriptions, canonical links, Open Graph metadata and organization structured data
 
 ## Preview
-Open index.html in a browser. No build step is required.
+Open `index.html` in a browser. No build command is required.
 
 ## Before launch
-Replace sample course content and contact placeholders with approved academy details. Enrollment and contact forms are demo-only and do not transmit or store submissions; connect a form backend or CRM before accepting real enquiries.
+The course list and article cards are starter content and should be confirmed or replaced with current academy information. The enrollment and contact forms are front-end demonstrations only: they do not send or store submissions. Connect a form backend, CRM or email workflow before accepting real enquiries.
 
-## GitHub Pages
-In repository Settings, open Pages, choose Deploy from a branch, select main and the root folder, then save.
+## Deploy
+The site is connected to Vercel through the GitHub repository. Push changes to the `main` branch to trigger a new deployment.
