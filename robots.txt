@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fynd-academy-fynd10.vercel.app/sitemap.xml
