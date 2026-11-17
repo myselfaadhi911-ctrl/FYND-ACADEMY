@@ -1,0 +1,2 @@
+// Shared lightweight interactions. Forms are demo-only until connected to a backend.
+document.querySelectorAll('[data-open-enroll]').forEach(el=>el.addEventListener('click',()=>document.querySelector('#enroll')?.scrollIntoView({behavior:'smooth'})));
