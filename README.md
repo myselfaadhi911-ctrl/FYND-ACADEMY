@@ -23,3 +23,8 @@ The course list and article cards are starter content and should be confirmed or
 
 ## Deploy
 The site is connected to Vercel through the GitHub repository. Push changes to the `main` branch to trigger a new deployment.
+
+## Design notes (colour-play update)
+- Display font: Bricolage Grotesque (Google Fonts); body: DM Sans.
+- Headings are split into letters by `script.js` and animate on scroll; confetti, tilt cards, scroll bar and click bursts are also generated there.
+- All motion is disabled under `prefers-reduced-motion`.
