@@ -1,1 +1,84 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FYND Academy</title><link rel="stylesheet" href="styles.css"></head><body><header><a href="index.html">FYND ACADEMY</a><nav><a href="index.html">Home</a> <a href="about.html">About</a> <a href="courses.html">Courses</a> <a href="blogs.html">Blogs</a> <a href="contact.html">Contact</a> <a href="#enroll">Enroll Now</a></nav></header><main><section class="hero"><p>LEARN. CREATE. GROW.</p><h1>Learn skills.<br><em>Make moves.</em></h1><p>Turn your curiosity into capability. Build practical skills, create work you’re proud of, and take your next step with FYND Academy.</p><a class="button" href="courses.html">Explore courses</a> <a class="button" href="#enroll">Enroll Now</a></section><section><h2>Skills for what's next</h2><p>Practical learning for creative and digital careers.</p><div class="cards"><article><h3>Digital Marketing</h3><p>Strategy, social media, SEO and campaigns.</p></article><article><h3>Graphic Design</h3><p>Visual communication and creative production.</p></article><article><h3>Video Editing</h3><p>Editing workflows and storytelling.</p></article><article><h3>Web Development</h3><p>Build responsive experiences for the web.</p></article></div></section><section id="enroll"><h2>Ready to begin?</h2><p>Share your details and preferred course to start an enquiry.</p><form onsubmit="event.preventDefault();alert('Thanks! This demo form is not connected to a submission service yet.');"><input required placeholder="Your name"><input required type="tel" placeholder="Phone number"><input type="email" placeholder="Email"><select><option>Select a course</option><option>Digital Marketing</option><option>Graphic Design</option><option>Video Editing</option><option>Web Development</option></select><button>Submit enquiry</button></form></section></main><footer>© FYND Academy · Learn. Create. Grow.</footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#24113f">
+  <meta name="description" content="Explore creative and digital learning paths with FYND Academy. Discover new skills, build your ideas and take your next step.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://fynd-academy-fynd10.vercel.app/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FYND Academy — Learn. Create. Grow.">
+  <meta property="og:description" content="Discover creative and digital learning paths with FYND Academy.">
+  <meta property="og:url" content="https://fynd-academy-fynd10.vercel.app/">
+  <meta name="twitter:card" content="summary">
+  <title>FYND Academy | Learn. Create. Grow.</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"EducationalOrganization","name":"FYND Academy","url":"https://fynd-academy-fynd10.vercel.app/","description":"Creative and digital learning paths from FYND Academy."}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="FYND Academy home">
+      <span class="brand-mark" aria-hidden="true">F</span><span class="brand-name">FYND<span>ACADEMY</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="courses.html">Courses</a><a href="blogs.html">Blogs</a><a href="contact.html">Contact</a>
+      <button class="button button--nav" type="button" data-open-enroll>Enroll Now <span aria-hidden="true">↗</span></button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> A creative space to level up</p>
+        <h1>Find your spark.<br><span class="text-gradient">Build your future.</span></h1>
+        <p class="hero-lead">Turn curiosity into capability. Explore creative and digital skills, shape your ideas and take the next step with FYND Academy.</p>
+        <div class="hero-actions"><a class="button" href="courses.html">Explore courses <span aria-hidden="true">↗</span></a><button class="button button--light" type="button" data-open-enroll>I'm ready to begin</button></div>
+        <div class="hero-note"><span class="note-stars" aria-hidden="true">✳ ✳ ✳</span><span>Stay curious. Keep creating. Keep growing.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Abstract creative illustration representing learning and ideas">
+        <div class="art-orbit art-orbit--one"></div><div class="art-orbit art-orbit--two"></div>
+        <div class="art-sun"><span>MAKE<br>IT<br>HAPPEN</span><i>✳</i></div>
+        <div class="art-sticker art-sticker--top">IDEAS<br>IN MOTION</div>
+        <div class="art-sticker art-sticker--side">LEARN<br>BY DOING <b>↗</b></div>
+        <div class="art-star art-star--one">✳</div><div class="art-star art-star--two">✦</div>
+        <div class="art-caption">YOUR NEXT CHAPTER STARTS HERE <span>— FYND</span></div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Academy motto"><div class="ticker-track"><span>LEARN WITH PURPOSE</span><b>✳</b><span>CREATE WITH CONFIDENCE</span><b>✳</b><span>GROW WITH INTENTION</span><b>✳</b><span>LEARN WITH PURPOSE</span><b>✳</b><span>CREATE WITH CONFIDENCE</span><b>✳</b></div></section>
+
+    <section class="section section-wrap">
+      <div class="section-heading"><div><p class="eyebrow">Explore your potential</p><h2>Curiosity looks good<br>on <span class="text-gradient">you.</span></h2></div><p class="section-intro">Find a direction that excites you. Start with a skill, experiment with ideas and discover what you can create.</p></div>
+      <div class="course-grid course-grid--home">
+        <a class="course-card course-card--violet" href="courses.html#digital-marketing"><span class="course-index">01 / GROW</span><span class="course-icon" aria-hidden="true">↗</span><h3>Digital<br>Marketing</h3><p>Make ideas connect with people.</p><span class="card-link">Explore path <b>↗</b></span></a>
+        <a class="course-card course-card--peach" href="courses.html#graphic-design"><span class="course-index">02 / DESIGN</span><span class="course-icon" aria-hidden="true">✳</span><h3>Graphic<br>Design</h3><p>Give your creativity a visual voice.</p><span class="card-link">Explore path <b>↗</b></span></a>
+        <a class="course-card course-card--lime" href="courses.html#video-editing"><span class="course-index">03 / CREATE</span><span class="course-icon" aria-hidden="true">▶</span><h3>Video<br>Editing</h3><p>Turn moments into stories that move.</p><span class="card-link">Explore path <b>↗</b></span></a>
+        <a class="course-card course-card--blue" href="courses.html#web-development"><span class="course-index">04 / BUILD</span><span class="course-icon" aria-hidden="true">⌘</span><h3>Web<br>Development</h3><p>Bring useful digital experiences to life.</p><span class="card-link">Explore path <b>↗</b></span></a>
+      </div>
+      <div class="center-action"><a class="text-link" href="courses.html">See all learning paths <span aria-hidden="true">→</span></a></div>
+    </section>
+
+    <section class="process-section">
+      <div class="section-wrap process-layout"><div><p class="eyebrow eyebrow--light">The FYND way</p><h2>Learn it.<br><span>Try it.</span><br>Make it yours.</h2><p class="process-copy">A good learning journey turns information into action. Keep moving through the small steps that build real confidence.</p><button class="button button--lime" type="button" data-open-enroll>Start your journey <span aria-hidden="true">↗</span></button></div>
+        <div class="steps"><article class="step"><span>01</span><div><h3>Discover</h3><p>Find a subject that sparks your curiosity and set a direction.</p></div><b>✳</b></article><article class="step"><span>02</span><div><h3>Experiment</h3><p>Explore ideas, practise the fundamentals and learn through doing.</p></div><b>↗</b></article><article class="step"><span>03</span><div><h3>Create</h3><p>Put your learning into action and keep building your next skill.</p></div><b>✦</b></article></div>
+      </div>
+    </section>
+
+    <section class="section section-wrap closing-cta"><div class="cta-shape" aria-hidden="true">✳</div><p class="eyebrow">Your next move</p><h2>Make room for<br><span class="text-gradient">what's possible.</span></h2><p>One new skill can open up a whole new perspective. Take the first step with FYND Academy.</p><button class="button" type="button" data-open-enroll>Enroll Now <span aria-hidden="true">↗</span></button></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-main section-wrap"><div><a class="brand brand--footer" href="index.html"><span class="brand-mark">F</span><span class="brand-name">FYND<span>ACADEMY</span></span></a><p>Learn. Create. Grow.<br>A space for curious minds and bold ideas.</p></div><div class="footer-links"><div><b>Explore</b><a href="about.html">About us</a><a href="courses.html">Courses</a><a href="blogs.html">Blogs</a></div><div><b>Connect</b><a href="contact.html">Contact</a><button type="button" data-open-enroll>Enroll now ↗</button></div></div></div><div class="footer-bottom section-wrap"><span>© <span data-year>2026</span> FYND Academy. All rights reserved.</span><span>Made for the curious <b>✳</b></span></div></footer>
+
+  <dialog class="enroll-dialog" aria-labelledby="enroll-title"><button class="dialog-close" type="button" aria-label="Close enrollment form" data-close-enroll>×</button><p class="eyebrow">Your next chapter</p><h2 id="enroll-title">Let's get you <span class="text-gradient">started.</span></h2><p>Tell us a little about yourself and the learning path you're interested in.</p><form class="enroll-form" data-demo-form><label>Your name<input name="name" autocomplete="name" required placeholder="Enter your full name"></label><label>Phone number<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="Your mobile number"></label><label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@example.com"></label><label>Interested course<select name="course" required><option value="">Choose a learning path</option><option>Digital Marketing</option><option>Graphic Design</option><option>Video Editing</option><option>Web Development</option><option>UI/UX Design</option><option>Photography</option><option>Not sure yet</option></select></label><button class="button" type="submit">Send enquiry <span aria-hidden="true">↗</span></button><p class="form-notice" role="status">Demo form: submissions are not sent or stored yet.</p></form></dialog>
+</body>
+</html>
