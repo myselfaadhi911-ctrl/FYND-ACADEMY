@@ -106,4 +106,41 @@
   document.querySelectorAll("[data-year]").forEach((node) => {
     node.textContent = String(new Date().getFullYear());
   });
+
+  // Duplicate the ticker once so its loop can scroll continuously without a gap.
+  const ticker = document.querySelector(".ticker");
+  const tickerTrack = ticker?.querySelector(".ticker-track");
+  if (ticker && tickerTrack && !ticker.querySelector(".ticker-track[aria-hidden='true']")) {
+    const tickerClone = tickerTrack.cloneNode(true);
+    tickerClone.setAttribute("aria-hidden", "true");
+    ticker.appendChild(tickerClone);
+  }
+
+  // Reveal page sections as they enter the viewport. The page remains visible
+  // by default; motion is only enabled when the browser supports the observer.
+  const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    const revealTargets = document.querySelectorAll(
+      ".hero-copy, .hero-art, .section-heading, .course-card, .step, .story-grid > *, " +
+      ".value-grid article, .quote-section > *, .blog-card, .contact-aside, " +
+      ".contact-form-panel, .closing-cta > *, .inner-hero > *, .blog-tools, " +
+      ".filter-bar, .mini-cta-inner > *"
+    );
+    if (revealTargets.length) {
+      document.documentElement.classList.add("motion-ready");
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -36px 0px" });
+
+      revealTargets.forEach((element) => {
+        element.classList.add("reveal-item");
+        revealObserver.observe(element);
+      });
+    }
+  }
 })();
