@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="#7b35d5"/><path d="M17 16h30v8H26v8h18v8H26v12h-9z" fill="#fff"/><path d="M34 16h13v8H34z" fill="#d7f36a"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="FYND Academy">
+  <rect width="64" height="64" rx="17" fill="#171717"/>
+  <path d="M15 13h34v9H25v8h21v9H25v12H15z" fill="#FEF7EE"/>
+  <path d="M15 13h34v9H25v8h21v9H25v12H15z" fill="none" stroke="#DE5235" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="48" cy="46" r="8" fill="#F4BC41"/>
+  <path d="M48 40v12M42 46h12" stroke="#171717" stroke-width="2" stroke-linecap="round"/>
+  <path d="M7 7h11v5H7z" fill="#7FC7E4"/>
+  <path d="M46 7h11v5H46z" fill="#7F982D"/>
+</svg>
