@@ -449,3 +449,13 @@ html.motion-ready .course-card.reveal-item.is-visible,html.motion-ready .value-g
   font-display:swap;
 }
 :root{--font-body:"Poppins SemiBold","DM Sans",Arial,sans-serif}
+
+
+/* Homepage hero is copy-led: removed the right-side orbit illustration. */
+.seo-hero{grid-template-columns:minmax(0,1fr);min-height:590px}
+.seo-hero .hero-copy{max-width:980px}
+.seo-hero .hero-art{display:none!important}
+@media(min-width:721px){
+  .seo-hero{padding-block:78px 82px}
+  .seo-hero-title{max-width:920px}
+}
