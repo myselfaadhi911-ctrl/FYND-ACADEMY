@@ -671,3 +671,36 @@ body::before{
 @media(prefers-reduced-motion:reduce){
   body::before{animation:none!important}
 }
+
+
+/* Supplied FYND wordmark: blue on light surfaces, white on charcoal footer. */
+.brand{
+  display:inline-flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  gap:2px;
+  text-decoration:none;
+  flex-shrink:0;
+}
+.brand-logo{
+  display:block;
+  width:136px;
+  height:auto;
+  max-width:100%;
+  object-fit:contain;
+}
+.brand-logo--header{width:136px}
+.brand-logo--footer{width:158px}
+.brand-caption{
+  display:block;
+  margin-left:3px;
+  color:var(--ink);
+  font:600 8px/1.15 var(--font-body);
+  letter-spacing:3.2px;
+}
+.brand--footer .brand-caption{color:var(--sky)}
+@media(max-width:720px){
+  .brand-logo--header{width:125px}
+  .brand-logo--footer{width:150px}
+}
