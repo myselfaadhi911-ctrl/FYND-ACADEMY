@@ -42,3 +42,7 @@ The site is connected to Vercel through the GitHub repository. Push changes to t
 - **Cursor:** dot + trailing ring + comet tail + click ripple (mouse only; native cursor is restored over the enquiry dialog). Ring grows over links and cards.
 - **Background:** adds an interactive particle network, a dot grid that lights up around the pointer and a fine grain, on top of the flowing ribbons.
 - **New elements:** hero search/analytics/like widgets, hand-drawn underline, scroll-drawn "How it works" journey, floating enquire badge, back-to-top ring, rotating badge on inner-page heroes.
+
+ 
+## Placements section
+Homepage `#placements`: rings of tiles orbiting a FYND core (dependency-free take on a "Circles" component). Tiles are role glyphs by default. To show real learner photos or company logos, put the files in `assets/placements/` and replace a tile's glyph with `<img src="assets/placements/name.jpg" alt="Name, Company">` (see the comment in `index.html`). Only add placement names or companies the academy has confirmed.

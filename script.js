@@ -460,11 +460,12 @@
   })();
   const waveSvg = () =>
     `<svg viewBox="0 0 4800 80" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="${wavePath}"/></svg>`;
-  $$(".audience-section, .seo-cta, .values-section, .mini-cta, .process-section").forEach((section) => {
+  $(".audience-section, .placements, .seo-cta, .values-section, .mini-cta, .process-section").forEach((section) => {
     const wave = document.createElement("div");
     wave.className = "wave";
     wave.setAttribute("aria-hidden", "true");
     wave.style.setProperty("--wc", section.matches(".seo-cta, .mini-cta") ? "var(--royal)" : "var(--ink)");
+    if (section.previousElementSibling?.matches(".placements, .audience-section")) wave.style.setProperty("--wb", "var(--ink)");
     wave.innerHTML = waveSvg() + waveSvg();
     section.before(wave);
   });
@@ -491,6 +492,8 @@
   tag(".outcomes-copy > :not(h2)", "up", 90);
   tag(".role-tags span", "pop", 70);
   tag(".seo-cta-inner > div", "up", 130);
+  tag(".pl-copy > :not(h2)", "left", 90);
+  tag(".circles", "zoom");
   tag(".faq-heading > :not(h2)", "left", 90);
   tag(".faq-item", "up", 80);
   tag(".about-lead, .story-copy > *", "up", 100);
@@ -890,7 +893,7 @@
 
   const LINKS = "a, button, summary, label, select, .filter-chip, [data-open-enroll], .role-tags span";
   const CARDS = ".course-card, .module-card, .why-card, .blog-card, .j-card, .stat";
-  const DARK = ".audience-section, .seo-cta, .values-section, .mini-cta, .process-section, .site-footer, .ticker, .button:not(.button--light):not(.button--white):not(.button--lime), " +
+  const DARK = ".audience-section, .placements, .seo-cta, .values-section, .mini-cta, .process-section, .site-footer, .ticker, .button:not(.button--light):not(.button--white):not(.button--lime), " +
     ".module-card--coral, .module-card--blue, .module-card--olive, .module-card--pink, .course-card--violet, .course-card--peach, .course-card--blue, .course-card--pink, " +
     ".blog-art--one, .blog-art--two, .blog-art--three, .blog-art--four, .outcomes-circle, .enq-badge, .ho-core, .ho-chip--blue, .ho-chip--ink, .hw-like";
   let cx = -100, cy = -100, rx = -100, ry = -100, trail = [], looping = false, idle = 0;
@@ -954,3 +957,5 @@
   });
   window.addEventListener("pointerup", () => ring.classList.remove("is-down"));
 })();
+
+
