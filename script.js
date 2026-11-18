@@ -228,7 +228,7 @@
     // 2. Confetti shapes behind heroes and call-to-action bands.
     const kinds = ["dot", "ring", "tri", "plus", "squig", "half", "spark"];
     const rand = (min, max) => min + Math.random() * (max - min);
-    const confettiHosts = [...document.querySelectorAll(".hero, .inner-hero, .closing-cta, .mini-cta, .values-section")];
+    const confettiHosts = [...document.querySelectorAll(".hero:not(.seo-hero), .inner-hero, .closing-cta, .mini-cta, .values-section")];
     const confettiLayers = confettiHosts.map((host) => {
       const layer = document.createElement("div");
       layer.className = "confetti";
