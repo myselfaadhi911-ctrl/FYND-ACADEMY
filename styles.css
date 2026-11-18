@@ -1095,3 +1095,47 @@ body::-webkit-scrollbar{width:10px}
 @media(max-width:860px){.placements{padding-block:76px}.pl-layout{grid-template-columns:1fr;gap:34px}.pl-copy{text-align:left}}
 @media(prefers-reduced-motion:reduce){.c-ring,.orb-item,.c-core,.placements:before{animation:none!important}}
 @media(max-width:720px){html.sx-on .sx[data-sx=left].is-in,html.sx-on .sx[data-sx=right].is-in{translate:0 0}}
+
+
+
+/* FYND Academy — official four-colour brand palette */
+:root{
+  --ink:#171717;--muted:#666666;--purple:#2E3192;--purple-dark:#171717;
+  --lime:#FFF200;--peach:#ED1C24;--blue:#00DD5E;--paper:#FFFFFF;--white:#FFFFFF;
+  --line:rgba(46,49,146,.16);--coral:#ED1C24;--gold:#FFF200;--olive:#00DD5E;
+  --royal:#2E3192;--sky:#00DD5E;--cream:#FFFFFF;
+  --rainbow:linear-gradient(90deg,#ED1C24 0 25%,#FFF200 25% 50%,#00DD5E 50% 75%,#2E3192 75% 100%);
+  --t1:#ED1C24;--t2:#FFF200;--t3:#00DD5E;--t4:#2E3192;--t5:#ED1C24;--t6:#FFF200;
+}
+body{background:#fff;color:#171717}
+::selection{background:#FFF200;color:#171717}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline-color:#2E3192}
+.skip-link{background:#FFF200;color:#171717}
+.site-header{background:rgba(255,255,255,.94);border-bottom-color:rgba(46,49,146,.13)}
+.site-header:after{background:var(--rainbow)}
+.brand{align-items:center;justify-content:flex-start;flex-direction:column;gap:6px}
+.brand-logo--header{width:48px;height:44px;object-fit:contain}
+.brand-logo--footer{width:82px;height:auto;object-fit:contain}
+.brand-caption{margin:2px 0 0;color:#171717;letter-spacing:2.8px}
+.brand--footer .brand-caption{color:#FFF200}
+.primary-nav>a:hover,.primary-nav>a[aria-current=page]{color:#2E3192}
+.primary-nav>a[aria-current=page]:after{background:#ED1C24}
+.button{background:#2E3192;box-shadow:0 10px 24px rgba(46,49,146,.2)}
+.button:hover{background:#252876;box-shadow:0 14px 30px rgba(46,49,146,.27)}
+.button--nav{background:#ED1C24;box-shadow:0 9px 20px rgba(237,28,36,.18)}
+.button--nav:hover{background:#c9151c}
+.button--light{background:#fff;color:#171717;border-color:rgba(46,49,146,.2)}
+.button--light:hover{background:#FFF200;color:#171717}
+.button--lime{background:#FFF200;color:#171717}
+.button--lime:hover{background:#e6da00;color:#171717}
+.eyebrow{color:#2E3192}
+.eyebrow-dot{background:#FFF200;border-color:#ED1C24;box-shadow:0 0 0 4px rgba(255,242,0,.2)}
+.text-gradient{background:linear-gradient(100deg,#ED1C24 0%,#2E3192 52%,#00DD5E 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero:before{background:linear-gradient(110deg,rgba(237,28,36,.045),rgba(255,242,0,.12) 34%,rgba(0,221,94,.07) 68%,rgba(46,49,146,.055))}
+.hero-art:before{background:linear-gradient(140deg,#FFF200 0%,#00DD5E 52%,#ED1C24 100%);box-shadow:0 40px 90px rgba(46,49,146,.14)}
+.hero-art:after{border-color:rgba(46,49,146,.35)}
+.site-footer{background:#2E3192;color:#fff}
+.footer-links b{color:#FFF200}
+.footer-bottom b{color:#00DD5E}
+.site-footer:before{background:var(--rainbow);animation:none}
+.process-section,.values-section,.mini-cta,.site-footer,.ticker{--t1:#ED1C24;--t2:#FFF200;--t3:#00DD5E;--t4:#2E3192;--t5:#ED1C24;--t6:#FFF200}
