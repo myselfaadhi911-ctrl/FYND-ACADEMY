@@ -612,3 +612,62 @@ body{background:var(--paper);color:var(--ink)}
 @media(prefers-reduced-motion:reduce){
   .site-header:after,.site-footer:before,.contact-form-panel:before{animation:none;background:var(--royal)}
 }
+
+
+/* ===== Subtle branded site background ===== */
+body{
+  background-color:#E0E0E0;
+  background-image:
+    linear-gradient(rgba(52,52,52,.022) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(52,52,52,.022) 1px,transparent 1px),
+    radial-gradient(ellipse at 12% 10%,rgba(57,75,212,.095),transparent 34%),
+    radial-gradient(ellipse at 88% 34%,rgba(57,75,212,.075),transparent 31%),
+    radial-gradient(ellipse at 46% 90%,rgba(52,52,52,.055),transparent 38%);
+  background-size:36px 36px,36px 36px,auto,auto,auto;
+  background-attachment:fixed;
+}
+body::before{
+  background:
+    radial-gradient(ellipse at 14% 14%,rgba(57,75,212,.10),transparent 42%),
+    radial-gradient(ellipse at 88% 64%,rgba(57,75,212,.075),transparent 40%),
+    radial-gradient(ellipse at 48% 100%,rgba(52,52,52,.07),transparent 38%);
+  opacity:.68;
+  filter:blur(4px);
+  animation:fynd-background-drift 34s ease-in-out infinite alternate;
+}
+@keyframes fynd-background-drift{
+  0%{transform:translate3d(-1%,0,0) scale(1)}
+  100%{transform:translate3d(1%,1.5%,0) scale(1.04)}
+}
+.hero:before{
+  background:
+    radial-gradient(ellipse at 16% 20%,rgba(57,75,212,.13),transparent 48%),
+    linear-gradient(120deg,rgba(224,224,224,.78),rgba(224,224,224,.48));
+  border:1px solid rgba(52,52,52,.07);
+}
+.seo-intro,.why-section,.outcomes-section,.faq-section{
+  position:relative;
+}
+.seo-intro:before,.why-section:before,.outcomes-section:before,.faq-section:before{
+  content:"";
+  position:absolute;
+  inset:22px 0;
+  z-index:-1;
+  pointer-events:none;
+  border-radius:30px;
+  background:radial-gradient(ellipse at 6% 50%,rgba(57,75,212,.055),transparent 60%);
+}
+.seo-modules{
+  background:
+    radial-gradient(ellipse at 90% 10%,rgba(57,75,212,.10),transparent 42%),
+    linear-gradient(145deg,#E0E0E0,#e8e8e8);
+}
+.why-card,.module-card--gold,.module-card--sky,.module-card--cream{
+  box-shadow:0 12px 35px rgba(52,52,52,.055);
+}
+.contact-form-panel,.enroll-dialog{
+  box-shadow:0 24px 70px rgba(52,52,52,.12);
+}
+@media(prefers-reduced-motion:reduce){
+  body::before{animation:none!important}
+}
