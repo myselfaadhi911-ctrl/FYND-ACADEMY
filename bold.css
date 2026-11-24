@@ -70,6 +70,12 @@ h3{font-family:"Poppins",var(--font-display);font-weight:600;letter-spacing:-.01
 .site-header .brand-mark{background:var(--b-gold)!important;color:var(--b-ink)!important;border-radius:50%;transform:none}
 .site-header .brand-name{color:#fff}
 .site-header .brand-name span{color:var(--b-gold)!important}
+.site-header .brand-caption{color:#fff!important}
+.site-header .brand{flex-direction:row!important;align-items:center!important;gap:10px}
+.site-header .brand-caption{margin:0!important;font:600 12px/1 "Poppins",var(--font-body)!important;letter-spacing:3px!important}
+.site-header .brand-logo{width:auto!important;height:48px!important;max-width:none;background:#fff;border-radius:14px;padding:4px 6px;transform:none!important;filter:none!important}
+.site-footer .brand-logo{background:#fff;border-radius:16px;padding:6px 8px}
+.site-footer .brand-caption{color:#fff!important}
 .site-header .primary-nav>a{color:rgba(255,255,255,.78)!important;font:600 14px "Poppins",var(--font-body)!important;background:none!important}
 .site-header .primary-nav>a:hover,
 .site-header .primary-nav>a[aria-current=page]{color:var(--b-gold)!important}
@@ -106,6 +112,7 @@ html,body{overflow-x:clip}
 .site-header::after,.site-header::before{display:none!important}
 .bold-hero::before,.bold-hero::after{display:none!important}
 .bold-hero .confetti{opacity:.55}
+.bold-hero .hero-orbit{display:none!important}
 .bold-hero{
   display:flex!important;justify-content:center;text-align:center;
   min-height:calc(100svh - 190px);
@@ -240,6 +247,7 @@ html,body{overflow-x:clip}
   .site-header{height:64px;top:10px;margin-top:10px;padding:0 8px 0 16px!important}
   .site-header .primary-nav{top:76px!important}
   .menu-toggle{width:46px!important;height:46px!important}
+  .site-header .brand-logo{height:42px!important}
   .bold-hero{padding:52px 0 40px!important;min-height:auto}
   .hero-badge{font-size:13px;padding:9px 16px;margin-bottom:22px}
   .bold-hero .seo-hero-title{font-size:clamp(32px,10vw,56px)!important}
