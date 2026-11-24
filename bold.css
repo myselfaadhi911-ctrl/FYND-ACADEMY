@@ -147,7 +147,7 @@ html,body{overflow-x:clip}
 
 /* ---------- Ticker: black band ---------- */
 .ticker{background:var(--b-ink)!important;border-block:0!important;transform:rotate(-1deg);margin:10px 0}
-.ticker span{font-family:var(--b-display)!important;font-style:italic;font-weight:900;font-stretch:125%;color:#fff!important;text-transform:uppercase}
+.ticker-track>span{font-family:var(--b-display)!important;font-style:italic;font-weight:900;font-stretch:125%;color:#fff!important;text-transform:uppercase}
 .ticker b{color:var(--b-gold)!important}
 
 /* ---------- Cards: white, bordered, hard shadow ---------- */
@@ -170,9 +170,9 @@ html,body{overflow-x:clip}
 .module-card--coral *,.module-card--blue *,.module-card--olive *{color:#fff!important}
 .why-number{font-family:var(--b-display)!important;font-style:italic;font-weight:900;color:var(--b-coral)!important}
 .why-icon{background:var(--b-gold)!important;border:2px solid var(--b-ink);color:var(--b-ink)!important}
-.role-tags span{border:2px solid var(--b-ink)!important;background:#fff!important;border-radius:999px!important;box-shadow:2px 2px 0 0 var(--b-ink);font-weight:600}
-.role-tags span:nth-child(4n+1){background:var(--b-gold)!important}
-.role-tags span:nth-child(4n+3){background:var(--b-sky)!important}
+.role-tags>span{border:2px solid var(--b-ink)!important;background:#fff!important;border-radius:999px!important;box-shadow:2px 2px 0 0 var(--b-ink);font-weight:600}
+.role-tags>span:nth-child(4n+1){background:var(--b-gold)!important}
+.role-tags>span:nth-child(4n+3){background:var(--b-sky)!important}
 
 /* ---------- Dark blocks ---------- */
 .audience-section,.seo-cta,.mini-cta,.values-section{
@@ -182,7 +182,7 @@ html,body{overflow-x:clip}
 .audience-section h2,.seo-cta h2,.mini-cta h2,.values-section h2{color:#fff!important}
 .audience-section h2 span,.seo-cta h2 span,.mini-cta h2 span{color:var(--b-gold)!important;background:none!important}
 .audience-list>div{background:#232323!important;border-color:#fff!important;box-shadow:4px 4px 0 0 var(--b-gold)!important;color:#fff}
-.audience-list>div span{color:var(--b-gold)!important}
+.audience-list>div>span{color:var(--b-gold)!important}
 .values-section .value-grid article{color:var(--b-ink)}
 .values-section .value-grid article *{color:var(--b-ink)}
 .seo-cta .button{border-color:#fff!important;box-shadow:4px 4px 0 0 #fff!important}
@@ -260,3 +260,273 @@ html,body{overflow-x:clip}
 @media(prefers-reduced-motion:reduce){
   .button,.action-bar-main,.module-card,.why-card,.course-card,.blog-card{transition:none!important}
 }
+
+/* =====================================================================
+   Full-site theme pass: every section in the Delta-style card system,
+   FYND multicolour accents.
+   ===================================================================== */
+
+/* Section titles: bold Poppins, sentence case (hero h1 stays heavy italic) */
+h2{
+  font-family:"Poppins",var(--font-display)!important;font-style:normal!important;
+  font-weight:700!important;font-stretch:100%;font-variation-settings:normal;
+  text-transform:none!important;letter-spacing:-.025em!important;line-height:1.08!important;
+  font-size:clamp(28px,3.6vw,48px)!important;
+}
+.section-heading{
+  display:flex!important;flex-direction:column;align-items:center;text-align:center;
+  gap:14px!important;max-width:860px;margin:0 auto 46px!important;grid-template-columns:none!important;
+}
+.section-heading>div{display:flex;flex-direction:column;align-items:center}
+.section-heading .eyebrow{margin-bottom:16px}
+.section-intro{max-width:620px;margin:0 auto!important;font:500 16px/1.6 "Poppins",var(--font-body)!important;color:#4a4740}
+.section-intro--light{color:rgba(255,255,255,.75)!important}
+.section{padding-block:clamp(64px,8vw,104px)!important}
+
+/* Shared tokens for "tiles" (Delta's small bordered icon squares) */
+.module-symbol,.why-icon,.course-icon,.j-node,.contact-note>span{
+  width:52px!important;height:52px!important;display:grid!important;place-items:center;
+  border:2px solid var(--b-ink)!important;border-radius:14px!important;
+  background:#fff!important;color:var(--b-ink)!important;
+  box-shadow:3px 3px 0 0 var(--b-ink)!important;font-size:22px!important;
+}
+
+/* ---------- Welcome / intro ---------- */
+.seo-intro{align-items:center!important;gap:clamp(32px,5vw,72px)!important}
+.seo-intro-copy p{font:500 16px/1.7 "Poppins",var(--font-body);color:#3b3934}
+.seo-intro-copy .eyebrow{margin-bottom:18px}
+.text-link{font:600 15px "Poppins",var(--font-body)!important;color:var(--b-ink)!important;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.intro-art{min-height:380px}
+.intro-art-back{background:var(--b-gold)!important;border:2px solid var(--b-ink)!important;border-radius:32px!important;box-shadow:var(--b-shadow-lg)!important;filter:none!important}
+.intro-art-card{background:var(--b-ink)!important;border:2px solid var(--b-ink)!important;color:#fff!important}
+.intro-art-card>span{font-family:var(--b-display)!important;font-style:italic;font-weight:900;font-stretch:125%;color:#fff!important}
+.intro-art-card b{color:var(--b-gold)!important}
+.intro-stamp{background:var(--b-coral)!important;color:#fff!important;border:2px solid var(--b-ink)!important;box-shadow:var(--b-shadow)!important}
+
+/* ---------- Stats ---------- */
+.stats{gap:18px!important;padding-block:20px 56px!important}
+.stat{
+  background:#fff!important;border:2px solid var(--b-ink)!important;border-radius:24px!important;
+  box-shadow:var(--b-shadow-lg)!important;padding:26px 24px!important;
+  backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+}
+.stat::before,.stat::after{display:none!important}
+.stat b{
+  display:block;font-family:var(--b-display)!important;font-style:italic;font-weight:900!important;
+  font-stretch:125%;font-size:clamp(44px,5vw,64px)!important;line-height:1!important;color:var(--b-ink)!important;
+  background:none!important;-webkit-text-fill-color:currentColor!important;
+}
+.stat>span{font:600 14px/1.4 "Poppins",var(--font-body)!important;color:var(--b-ink)!important}
+.stat:nth-child(1){background:var(--b-gold)!important}
+.stat:nth-child(2){background:var(--b-sky)!important}
+.stat:nth-child(3){background:var(--b-coral)!important}
+.stat:nth-child(3) b,.stat:nth-child(3)>span{color:#fff!important}
+.stat:nth-child(4){background:#fff!important}
+
+/* ---------- Mega marquee: black band, outlined + filled words ---------- */
+.mega{
+  background:var(--b-ink)!important;color:#fff;padding-block:22px!important;overflow:hidden;
+  width:min(1200px,calc(100% - 24px));margin:0 auto!important;border-radius:36px;
+}
+.mega-row>span{
+  font-family:var(--b-display)!important;font-style:italic;font-weight:900!important;font-stretch:125%;
+  color:transparent!important;-webkit-text-stroke:2px #fff;background:none!important;
+}
+.mega-row>span.fill{color:var(--b-gold)!important;-webkit-text-stroke:0}
+.mega-row:nth-child(2)>span.fill{color:var(--b-sky)!important}
+.mega-row i{color:var(--b-coral)!important}
+
+/* ---------- Modules ---------- */
+.module-card{padding:28px!important}
+.module-card::before,.module-card::after{display:none!important}
+.module-card>span:first-child{font:600 12px/1 "Poppins",var(--font-body)!important;letter-spacing:.08em}
+.module-card h3{font:700 22px/1.2 "Poppins",var(--font-body)!important;margin-top:18px}
+.module-card .module-symbol{color:var(--b-ink)!important}
+.module-footer{
+  background:#fff;border:2px solid var(--b-ink);border-radius:24px;box-shadow:var(--b-shadow-lg);
+  padding:22px 26px!important;margin-top:34px!important;align-items:center;
+}
+.module-footer p{font:500 15px/1.5 "Poppins",var(--font-body)}
+
+/* ---------- Why cards ---------- */
+.why-card{padding:28px!important}
+.why-card::before,.why-card::after{display:none!important}
+.why-card h3{font:700 20px/1.25 "Poppins",var(--font-body)!important}
+.why-card:nth-child(4n+1) .why-icon{background:var(--b-gold)!important}
+.why-card:nth-child(4n+2) .why-icon{background:var(--b-sky)!important}
+.why-card:nth-child(4n+3) .why-icon{background:var(--b-coral)!important;color:#fff!important}
+.why-card:nth-child(4n+4) .why-icon{background:var(--b-olive)!important;color:#fff!important}
+
+/* ---------- Journey ---------- */
+.journey{padding-block:clamp(64px,8vw,104px)!important}
+.journey-track::before,.journey-track::after{background:var(--b-ink)!important;opacity:1!important}
+.j-node{background:var(--b-ink)!important;color:var(--b-gold)!important;border-radius:50%!important;
+  font-family:var(--b-display)!important;font-style:italic;font-weight:900}
+.j-card{
+  background:#fff!important;border:2px solid var(--b-ink)!important;border-radius:24px!important;
+  box-shadow:var(--b-shadow-lg)!important;backdrop-filter:none!important;
+}
+.j-step:nth-child(1) .j-card{background:var(--b-gold)!important}
+.j-step:nth-child(3) .j-card{background:var(--b-sky)!important}
+.j-card h3{font:700 19px/1.25 "Poppins",var(--font-body)!important}
+
+/* ---------- Outcomes ---------- */
+.outcomes-circle{
+  background:var(--b-royal)!important;color:#fff!important;border:2px solid var(--b-ink)!important;
+  box-shadow:8px 8px 0 0 var(--b-ink)!important;
+  font-family:var(--b-display)!important;font-style:italic;font-weight:900;font-stretch:125%;
+}
+.outcomes-circle strong{color:var(--b-gold)!important}
+.outcomes-star{color:var(--b-coral)!important}.outcomes-arrow{color:var(--b-ink)!important}
+.role-tags>span{padding:10px 18px!important;font:600 14px "Poppins",var(--font-body)!important;color:var(--b-ink)!important}
+
+/* ---------- Placements: rounded black block ---------- */
+.placements{
+  background:var(--b-ink)!important;width:min(1200px,calc(100% - 24px));margin:40px auto!important;
+  border-radius:36px;overflow:hidden;
+}
+.placements h2{color:#fff!important}
+.placements h2 span{color:var(--b-gold)!important;background:none!important}
+.placements p{color:rgba(255,255,255,.78)}
+.orb-item{
+  background:#fff!important;color:var(--b-ink)!important;border:2px solid #fff!important;
+  border-radius:14px!important;box-shadow:3px 3px 0 0 var(--b-gold)!important;
+}
+.c-ring--2 .orb-item{background:var(--b-gold)!important}
+.c-ring--3 .orb-item{background:var(--b-sky)!important}
+.c-ring{border-color:rgba(255,255,255,.18)!important}
+
+/* ---------- CTA + FAQ headings ---------- */
+.seo-cta{margin-block:40px!important}
+.faq-heading{text-align:center;max-width:760px;margin:0 auto 40px}
+.faq-heading p{font:500 16px/1.6 "Poppins",var(--font-body)}
+.faq-list{max-width:900px;margin:0 auto}
+.faq-section{display:block!important}
+.faq-item summary{padding:20px 22px!important}
+.faq-item p{padding:0 22px 20px!important;font:500 15px/1.65 "Poppins",var(--font-body)}
+
+/* ===================== Inner pages ===================== */
+.inner-hero{
+  display:flex!important;flex-direction:column;align-items:center;text-align:center;
+  padding:clamp(64px,9vw,120px) 0 clamp(44px,6vw,80px)!important;min-height:0!important;
+}
+.inner-hero::before,.inner-hero::after{display:none!important}
+.inner-hero .eyebrow{background:var(--b-gold)!important;font-size:14px!important;padding:10px 20px;margin-bottom:26px}
+.inner-hero h1{font-size:clamp(40px,7vw,96px)!important;max-width:1000px;margin:0 0 24px}
+.inner-hero h1 br{display:none}
+.inner-hero h1 .text-gradient{display:inline-block;margin-left:.2em}
+.inner-lead{max-width:620px;margin:0 auto!important;font:600 clamp(15px,1.5vw,18px)/1.55 "Poppins",var(--font-body)!important;color:#2b2a28!important}
+.inner-hero-mark{
+  position:static!important;margin-top:34px;width:84px!important;height:84px!important;
+  background:var(--b-gold)!important;border:2px solid var(--b-ink)!important;border-radius:50%!important;
+  box-shadow:var(--b-shadow)!important;display:grid!important;place-items:center;transform:rotate(-6deg)!important;
+}
+.inner-hero-mark>span{font-family:var(--b-display)!important;font-style:italic;font-weight:900;color:var(--b-ink)!important;font-size:38px!important}
+.inner-hero-mark b{display:none}
+.inner-hero .confetti{opacity:.5}
+
+/* About */
+.story-grid{align-items:start;gap:clamp(28px,5vw,64px)!important}
+.story-copy{background:#fff;border:2px solid var(--b-ink);border-radius:28px;box-shadow:var(--b-shadow-lg);padding:clamp(24px,3vw,40px)!important}
+.story-copy p{font:500 16px/1.7 "Poppins",var(--font-body)}
+.values-section{padding-block:clamp(56px,7vw,96px)!important}
+.value-grid article{padding:28px!important}
+.value-grid article:nth-child(1){background:var(--b-gold)!important}
+.value-grid article:nth-child(2){background:var(--b-sky)!important}
+.value-grid article:nth-child(3){background:#fff!important}
+.value-grid article>span{font-family:var(--b-display)!important;font-style:italic;font-weight:900;font-size:34px;color:var(--b-ink)!important}
+.value-grid article h3{font:700 21px/1.25 "Poppins",var(--font-body)!important}
+.quote-section{
+  text-align:center;background:var(--b-gold);border:2px solid var(--b-ink);border-radius:36px;
+  box-shadow:8px 8px 0 0 var(--b-ink);width:min(1100px,calc(100% - 48px));margin:60px auto!important;
+  padding:clamp(40px,6vw,80px) clamp(22px,5vw,72px)!important;
+}
+.quote-mark{color:var(--b-ink)!important;font-family:var(--b-display)!important;font-style:italic}
+.quote-section blockquote{
+  font-family:var(--b-display)!important;font-style:italic;font-weight:900;font-stretch:125%;
+  text-transform:uppercase;letter-spacing:-.03em;line-height:1.02;font-size:clamp(26px,4vw,52px)!important;color:var(--b-ink)!important;
+}
+.quote-section .button{background:#fff!important}
+
+/* Courses */
+.filter-bar{justify-content:center;gap:12px!important;margin-bottom:40px!important}
+.filter-chip{padding:12px 22px!important;font-size:14px!important;box-shadow:3px 3px 0 0 var(--b-ink)!important}
+.course-card{padding:28px!important;min-height:0!important}
+.course-card::before,.course-card::after{display:none!important}
+.course-card h2{font:700 clamp(24px,2.4vw,32px)/1.1 "Poppins",var(--font-body)!important;letter-spacing:-.02em!important;margin:16px 0 10px}
+.course-card .course-index{font:600 12px/1 "Poppins",var(--font-body)!important;letter-spacing:.08em}
+.course-card p{font:500 15px/1.55 "Poppins",var(--font-body)}
+.course-card--violet{background:var(--b-royal)!important;color:#fff}
+.course-card--violet *:not(.card-link):not(.card-link *):not(.course-icon){color:#fff!important}
+.course-card--peach,.course-card--pink{background:var(--b-coral)!important;color:#fff}
+.course-card--peach *:not(.card-link):not(.card-link *):not(.course-icon),
+.course-card--pink *:not(.card-link):not(.card-link *):not(.course-icon){color:#fff!important}
+.course-card--lime{background:var(--b-gold)!important}
+.course-card--blue{background:var(--b-sky)!important}
+.course-card--cream{background:#fff!important}
+.card-link--button{background:#fff!important;margin-top:18px;padding:12px 20px!important;font-size:14px!important}
+.mini-cta{padding-block:clamp(48px,6vw,80px)!important;margin-block:40px!important}
+.mini-cta p{color:rgba(255,255,255,.78)}
+
+/* Blogs */
+.blog-tools{align-items:end;gap:24px!important;margin-bottom:40px!important}
+.search-box{border:2px solid var(--b-ink)!important;border-radius:999px!important;background:#fff!important;box-shadow:var(--b-shadow)!important;padding:4px 8px 4px 18px!important}
+.search-box input{border:0!important;box-shadow:none!important;background:transparent!important}
+.blog-card{padding:16px 16px 24px!important;overflow:hidden}
+.blog-art{border:2px solid var(--b-ink)!important;border-radius:18px!important;box-shadow:none!important}
+.blog-art>span{font-family:var(--b-display)!important;font-style:italic;font-weight:900;font-stretch:125%}
+.blog-art--one{background:var(--b-gold)!important;color:var(--b-ink)!important}
+.blog-art--two{background:var(--b-royal)!important;color:#fff!important}
+.blog-art--three{background:var(--b-coral)!important;color:#fff!important}
+.blog-art--four{background:var(--b-sky)!important;color:var(--b-ink)!important}
+.blog-art *{color:inherit!important}
+.blog-card h3{font:700 20px/1.25 "Poppins",var(--font-body)!important;padding-inline:6px}
+.blog-card p,.blog-meta,.read-label{padding-inline:6px}
+.blog-meta{font:600 12px "Poppins",var(--font-body)!important;letter-spacing:.08em}
+.read-label{font:600 14px "Poppins",var(--font-body)!important}
+
+/* Contact */
+.contact-layout{align-items:stretch!important;gap:28px!important}
+.contact-aside{background:var(--b-ink)!important;color:#fff;padding:clamp(26px,3.4vw,44px)!important}
+.contact-aside h2{color:#fff!important}
+.contact-aside p{color:rgba(255,255,255,.8)}
+.contact-aside .eyebrow{background:var(--b-gold)!important}
+.contact-orbit{
+  width:88px!important;height:88px!important;background:var(--b-gold)!important;border:2px solid #fff!important;
+  border-radius:50%!important;display:grid!important;place-items:center;margin-bottom:24px;box-shadow:4px 4px 0 0 #fff!important;
+}
+.contact-orbit::before,.contact-orbit::after{display:none!important}
+.contact-orbit>span{font-family:var(--b-display)!important;font-style:italic;font-weight:900;color:var(--b-ink)!important;font-size:40px!important}
+.contact-orbit b{display:none}
+.contact-note{background:#232323!important;border:2px solid #fff!important;border-radius:20px!important;box-shadow:4px 4px 0 0 var(--b-gold)!important;padding:18px!important;gap:14px!important;align-items:center}
+.contact-note>span{background:var(--b-gold)!important;flex:none}
+.contact-form-panel{padding:clamp(26px,3.4vw,44px)!important}
+.contact-form label,.enroll-form label{font:600 14px "Poppins",var(--font-body)!important}
+
+/* Footer polish */
+.footer-links b{color:var(--b-gold)!important;font:700 14px "Poppins",var(--font-body)!important}
+.footer-bottom{border-top-color:rgba(255,255,255,.14)!important}
+
+/* Responsive for the new rules */
+@media(max-width:720px){
+  .section-heading{margin-bottom:32px!important}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+  .stat{padding:20px 16px!important}
+  .mega,.placements{border-radius:26px}
+  .quote-section{width:calc(100% - 24px);border-radius:26px}
+  .inner-hero h1 .text-gradient{margin-left:0}
+  .intro-art{min-height:300px}
+  .blog-tools{align-items:stretch}
+}
+
+/* Clean grid-paper canvas: drop the older soft background washes */
+body::before,.flow-canvas{display:none!important}
+.seo-intro::before,.why-section::before,.outcomes-section::before,.faq-section::before,
+.story-grid::before,.courses-section::before,.blog-section::before,.contact-layout::before,.journey::before{display:none!important}
+.why-card p,.j-card p,.value-grid article p,.module-card p{font:500 15px/1.55 "Poppins",var(--font-body)!important}
+.why-card p,.j-card p{color:#3b3934!important}
+.why-number{font-size:15px!important;opacity:1!important}
+.course-card--blue *:not(.card-link):not(.card-link *):not(.course-icon),
+.course-card--lime *:not(.card-link):not(.card-link *):not(.course-icon),
+.course-card--cream *:not(.card-link):not(.card-link *):not(.course-icon){color:var(--b-ink)!important}
+.seo-modules{background:transparent!important}
