@@ -460,7 +460,7 @@
   })();
   const waveSvg = () =>
     `<svg viewBox="0 0 4800 80" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="${wavePath}"/></svg>`;
-  $(".audience-section, .placements, .seo-cta, .values-section, .mini-cta, .process-section").forEach((section) => {
+  $$(".audience-section, .placements, .seo-cta, .values-section, .mini-cta, .process-section").forEach((section) => {
     const wave = document.createElement("div");
     wave.className = "wave";
     wave.setAttribute("aria-hidden", "true");
@@ -879,7 +879,8 @@
   }, { passive: true });
   document.addEventListener("pointerleave", () => { ptr.on = false; });
 
-  if (!fine) return;
+  // Custom cursor is switched off: the bold theme uses the normal system cursor.
+  if (!fine || true) return;
   root.classList.add("has-cursor");
   const dot = document.createElement("div"); dot.className = "cur-dot is-hidden";
   const ring = document.createElement("div"); ring.className = "cur-ring is-hidden";
