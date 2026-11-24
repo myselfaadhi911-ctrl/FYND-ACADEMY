@@ -1,0 +1,254 @@
+/* FYND Academy — bold layer: grid paper, black pill header, heavy italic type, hard-shadow pills.
+   Loaded after styles.css on every page. Uses the FYND palette. */
+:root{
+  --b-ink:#171717;
+  --b-paper:#FEF7EE;
+  --b-grid:rgba(23,23,23,.055);
+  --b-gold:#F4BC41;
+  --b-coral:#DE5235;
+  --b-royal:#3153BE;
+  --b-sky:#7FC7E4;
+  --b-olive:#7F982D;
+  --b-shadow:4px 4px 0 0 var(--b-ink);
+  --b-shadow-lg:6px 6px 0 0 var(--b-ink);
+  --b-display:"Archivo","Poppins","Arial Black",sans-serif;
+}
+
+/* ---------- Page canvas ---------- */
+body{
+  background-color:var(--b-paper);
+  background-image:
+    linear-gradient(var(--b-grid) 1px,transparent 1px),
+    linear-gradient(90deg,var(--b-grid) 1px,transparent 1px);
+  background-size:62px 62px;
+  background-position:center top;
+  color:var(--b-ink);
+  padding-bottom:96px; /* room for the floating action bar */
+}
+
+/* ---------- Display type ---------- */
+h1,h2,
+.seo-hero-title,
+.inner-hero h1{
+  font-family:var(--b-display)!important;
+  font-style:italic;
+  font-weight:900!important;
+  font-stretch:125%;
+  font-variation-settings:"wdth" 125;
+  text-transform:uppercase;
+  letter-spacing:-.035em!important;
+  line-height:.98!important;
+  color:var(--b-ink);
+}
+h2{font-size:clamp(30px,4.2vw,54px)!important}
+h3{font-family:"Poppins",var(--font-display);font-weight:600;letter-spacing:-.01em}
+.text-gradient{
+  background:none!important;-webkit-background-clip:initial!important;background-clip:initial!important;
+  color:var(--b-royal)!important;animation:none!important;
+}
+
+/* Eyebrows become small pill tags */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:7px 14px;border:2px solid var(--b-ink);border-radius:999px;
+  background:#fff;color:var(--b-ink)!important;
+  font:600 12px/1 "Poppins",var(--font-body)!important;letter-spacing:.02em!important;text-transform:none!important;
+  box-shadow:2px 2px 0 0 var(--b-ink);
+}
+.eyebrow--light{background:var(--b-gold)}
+.eyebrow-dot{background:var(--b-coral)!important}
+
+/* ---------- Header: floating black pill ---------- */
+.site-header{
+  position:sticky;top:12px;z-index:30;
+  width:min(1200px,calc(100% - 24px));margin:12px auto 0;
+  height:74px;padding:0 12px 0 22px!important;
+  background:var(--b-ink)!important;border:0!important;border-radius:999px;
+  backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+  box-shadow:0 10px 30px rgba(23,23,23,.18);
+}
+.site-header .brand-mark{background:var(--b-gold)!important;color:var(--b-ink)!important;border-radius:50%;transform:none}
+.site-header .brand-name{color:#fff}
+.site-header .brand-name span{color:var(--b-gold)!important}
+.site-header .primary-nav>a{color:rgba(255,255,255,.78)!important;font:600 14px "Poppins",var(--font-body)!important;background:none!important}
+.site-header .primary-nav>a:hover,
+.site-header .primary-nav>a[aria-current=page]{color:var(--b-gold)!important}
+.site-header .primary-nav>a[aria-current=page]:after{display:none!important}
+.menu-toggle{
+  width:52px!important;height:52px!important;border:0!important;border-radius:50%!important;
+  background:var(--b-gold)!important;
+}
+.menu-toggle span{background:var(--b-ink)!important;width:18px!important}
+
+/* ---------- Buttons: pills with hard shadows ---------- */
+.button,
+.card-link--button,
+.filter-chip{
+  border:2px solid var(--b-ink)!important;border-radius:999px!important;
+  background:var(--b-gold)!important;color:var(--b-ink)!important;
+  font:600 15px/1 "Poppins",var(--font-body)!important;
+  padding:15px 26px!important;gap:12px!important;
+  box-shadow:var(--b-shadow)!important;
+  transform:none;transition:transform .15s ease,box-shadow .15s ease,background .15s ease,color .15s ease!important;
+}
+.button:hover,.card-link--button:hover,.filter-chip:hover{
+  transform:translate(3px,3px)!important;box-shadow:1px 1px 0 0 var(--b-ink)!important;
+  background:var(--b-ink)!important;color:#fff!important;
+}
+.button--light,.button--white,.filter-chip{background:#fff!important}
+.button--contact{background:var(--b-sky)!important}
+.filter-chip.is-active{background:var(--b-ink)!important;color:#fff!important}
+.button--nav{padding:13px 22px!important;box-shadow:none!important;border-color:var(--b-gold)!important}
+.button--nav:hover{background:#fff!important;color:var(--b-ink)!important;transform:none!important}
+
+/* ---------- Homepage hero ---------- */
+html,body{overflow-x:clip}
+.site-header::after,.site-header::before{display:none!important}
+.bold-hero::before,.bold-hero::after{display:none!important}
+.bold-hero .confetti{opacity:.55}
+.bold-hero{
+  display:flex!important;justify-content:center;text-align:center;
+  min-height:calc(100svh - 190px);
+  padding:72px 0 56px!important;grid-template-columns:none!important;
+}
+.bold-hero .hero-copy{max-width:1060px;width:100%;min-width:0;display:flex;flex-direction:column;align-items:center;margin:auto}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:10px;margin:0 0 30px;
+  padding:11px 22px;border-radius:999px;background:var(--b-gold);border:2px solid var(--b-ink);
+  font:600 15px/1 "Poppins",var(--font-body);
+}
+.hero-badge-mark{
+  width:26px;height:26px;display:grid;place-items:center;border-radius:50%;
+  background:var(--b-ink);color:var(--b-gold);font-size:14px;
+}
+.bold-hero .seo-hero-title{
+  font-size:clamp(38px,6vw,92px)!important;margin:0 0 30px;max-width:none;
+}
+.hero-hl{
+  display:inline-block;color:var(--b-ink);
+  background:var(--b-coral);color:#fff;padding:.02em .22em .06em .14em;
+  border-radius:.18em;transform:rotate(-1.5deg);font-size:.92em;max-width:100%;
+  box-shadow:var(--b-shadow-lg);margin-top:.12em;
+}
+.bold-hero .hero-lead{
+  max-width:640px;margin:0 auto 34px;
+  font:600 clamp(15px,1.5vw,18px)/1.55 "Poppins",var(--font-body);color:#2b2a28;
+}
+.bold-hero .hero-actions{display:flex;flex-direction:column;align-items:center;gap:18px}
+.bold-hero .hero-actions .button{font-size:clamp(16px,1.6vw,20px)!important;padding:19px 38px!important;min-width:250px;box-shadow:var(--b-shadow-lg)!important}
+.bold-hero .hero-location{margin-top:30px;font:600 14px "Poppins",var(--font-body);color:#55524c}
+
+/* ---------- Ticker: black band ---------- */
+.ticker{background:var(--b-ink)!important;border-block:0!important;transform:rotate(-1deg);margin:10px 0}
+.ticker span{font-family:var(--b-display)!important;font-style:italic;font-weight:900;font-stretch:125%;color:#fff!important;text-transform:uppercase}
+.ticker b{color:var(--b-gold)!important}
+
+/* ---------- Cards: white, bordered, hard shadow ---------- */
+.module-card,.why-card,.course-card,.blog-card,.value-grid article,.faq-item,
+.contact-form-panel,.contact-aside,.audience-list>div,.intro-art-card{
+  border:2px solid var(--b-ink)!important;border-radius:24px!important;
+  box-shadow:var(--b-shadow-lg)!important;
+  transition:transform .18s ease,box-shadow .18s ease!important;
+}
+.module-card:hover,.why-card:hover,.course-card:hover,.blog-card:hover,.value-grid article:hover{
+  transform:translate(-3px,-3px)!important;box-shadow:9px 9px 0 0 var(--b-ink)!important;
+}
+.why-card,.blog-card,.value-grid article,.faq-item,.contact-form-panel{background:#fff!important}
+.module-card--coral{background:var(--b-coral)!important;color:#fff}
+.module-card--blue{background:var(--b-royal)!important;color:#fff}
+.module-card--gold{background:var(--b-gold)!important}
+.module-card--olive{background:var(--b-olive)!important;color:#fff}
+.module-card--sky{background:var(--b-sky)!important}
+.module-card--cream,.module-card--pink{background:#fff!important}
+.module-card--coral *,.module-card--blue *,.module-card--olive *{color:#fff!important}
+.why-number{font-family:var(--b-display)!important;font-style:italic;font-weight:900;color:var(--b-coral)!important}
+.why-icon{background:var(--b-gold)!important;border:2px solid var(--b-ink);color:var(--b-ink)!important}
+.role-tags span{border:2px solid var(--b-ink)!important;background:#fff!important;border-radius:999px!important;box-shadow:2px 2px 0 0 var(--b-ink);font-weight:600}
+.role-tags span:nth-child(4n+1){background:var(--b-gold)!important}
+.role-tags span:nth-child(4n+3){background:var(--b-sky)!important}
+
+/* ---------- Dark blocks ---------- */
+.audience-section,.seo-cta,.mini-cta,.values-section{
+  background:var(--b-ink)!important;color:#fff;
+  width:min(1200px,calc(100% - 24px));margin-inline:auto!important;border-radius:36px;
+}
+.audience-section h2,.seo-cta h2,.mini-cta h2,.values-section h2{color:#fff!important}
+.audience-section h2 span,.seo-cta h2 span,.mini-cta h2 span{color:var(--b-gold)!important;background:none!important}
+.audience-list>div{background:#232323!important;border-color:#fff!important;box-shadow:4px 4px 0 0 var(--b-gold)!important;color:#fff}
+.audience-list>div span{color:var(--b-gold)!important}
+.values-section .value-grid article{color:var(--b-ink)}
+.values-section .value-grid article *{color:var(--b-ink)}
+.seo-cta .button{border-color:#fff!important;box-shadow:4px 4px 0 0 #fff!important}
+.cta-contact-link{color:var(--b-gold)!important}
+
+/* ---------- FAQ ---------- */
+.faq-item{margin-bottom:16px!important;padding:4px 6px}
+.faq-item summary{font:600 16px "Poppins",var(--font-body)!important}
+.faq-item[open]{background:var(--b-gold)!important}
+
+/* ---------- Forms ---------- */
+.enroll-dialog{border:2px solid var(--b-ink)!important;border-radius:28px!important;box-shadow:8px 8px 0 0 var(--b-ink)!important}
+.enroll-form input,.enroll-form select,.contact-form input,.contact-form select,.contact-form textarea,.search-box input{
+  border:2px solid var(--b-ink)!important;border-radius:14px!important;background:#fff!important;box-shadow:none!important;
+}
+
+/* ---------- Footer ---------- */
+.site-footer{
+  background:var(--b-ink)!important;color:#fff;
+  width:min(1200px,calc(100% - 24px));margin:60px auto 0!important;border-radius:36px 36px 0 0;
+}
+.site-footer .brand-mark{background:var(--b-gold)!important;color:var(--b-ink)!important;border-radius:50%;transform:none}
+.site-footer .brand-name span{color:var(--b-gold)!important}
+.site-footer a:hover,.site-footer button:hover{color:var(--b-gold)!important}
+
+/* ---------- Floating action bar ---------- */
+.action-bar{
+  position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:25;
+  display:flex;align-items:center;gap:10px;
+  padding:7px 8px;min-width:min(560px,calc(100% - 28px));
+  background:#fff;border:2px solid var(--b-ink);border-radius:999px;
+  box-shadow:0 0 0 4px rgba(254,247,238,.9),var(--b-shadow);
+}
+.action-bar-main{
+  display:inline-flex;align-items:center;gap:10px;padding:13px 22px;
+  background:var(--b-gold);border:2px solid var(--b-ink);border-radius:999px;
+  box-shadow:3px 3px 0 0 var(--b-ink);
+  font:600 15px/1 "Poppins",var(--font-body);color:var(--b-ink);text-decoration:none;
+  transition:transform .15s,box-shadow .15s;
+}
+.action-bar-main:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 0 var(--b-ink)}
+.action-bar-icon{
+  width:46px;height:46px;flex:none;display:grid;place-items:center;border-radius:50%;
+  background:#fff;border:2px solid var(--b-ink);box-shadow:2px 2px 0 0 var(--b-ink);color:var(--b-ink);
+  transition:transform .15s,background .15s;
+}
+.action-bar-icon:hover{transform:translateY(-2px);background:var(--b-sky)}
+.action-bar-icon--ig{background:var(--b-coral);color:#fff}
+.enroll-dialog[open]~.action-bar,body:has(.enroll-dialog[open]) .action-bar{display:none}
+
+/* ---------- Responsive ---------- */
+@media(max-width:980px){
+  .site-header .primary-nav{
+    top:86px!important;left:0!important;right:0!important;
+    background:var(--b-ink)!important;border:0!important;border-radius:28px;
+    padding:14px 22px 22px!important;box-shadow:0 18px 40px rgba(23,23,23,.25)!important;
+  }
+  .site-header .primary-nav>a{border-bottom:1px solid rgba(255,255,255,.12)!important;font-size:16px!important}
+}
+@media(max-width:720px){
+  body{background-size:44px 44px}
+  .site-header{height:64px;top:10px;margin-top:10px;padding:0 8px 0 16px!important}
+  .site-header .primary-nav{top:76px!important}
+  .menu-toggle{width:46px!important;height:46px!important}
+  .bold-hero{padding:52px 0 40px!important;min-height:auto}
+  .hero-badge{font-size:13px;padding:9px 16px;margin-bottom:22px}
+  .bold-hero .seo-hero-title{font-size:clamp(32px,10vw,56px)!important}
+  .hero-hl{font-size:min(.92em,7.1vw)}
+  .bold-hero .hero-actions .button{min-width:0;width:100%;max-width:300px;padding:17px 28px!important}
+  .audience-section,.seo-cta,.mini-cta,.values-section{border-radius:26px}
+  .action-bar{min-width:0;width:calc(100% - 24px);justify-content:flex-start}
+  .action-bar-main{flex:0 1 auto;font-size:14px;padding:12px 18px}
+}
+@media(prefers-reduced-motion:reduce){
+  .button,.action-bar-main,.module-card,.why-card,.course-card,.blog-card{transition:none!important}
+}
